@@ -1,0 +1,12 @@
+<template name="EmailCollectionDisplayTemplate" id="EmailCollectionDisplayTemplate">
+    <div class="pre-scrollable" >
+<ul class="list-group">
+{{#each emails}}
+<li class="list-group-item  flex-column align-items-start">
+    <div>{{this.subject}}</div>
+    <div>{{this.message}}</div>
+</li>
+{{/each}}
+</ul>
+</div>
+</template>

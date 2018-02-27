@@ -1,0 +1,13 @@
+<template name="adminResidents">
+  <div>
+     <a href="{{ pathFor 'admin.resident.register' }}" id="Register Resident" class="btn btn.sharp btn-default btn.sharp">Add</a>
+     <div id="clients">
+       {{> reactiveTable class="table table-bordered table-hover" collection=tables settings=settings}}
+     </div>
+   </div>
+</template>
+
+
+<template name="residentViewButtonTemplate" id="residentViewButtonTemplate">
+    <a href="{{ pathFor 'admin.view.resident' }}" id="viewResidentRecord" class="btn btn.sharp btn-default ">View</a>
+</template>

@@ -1,0 +1,86 @@
+<template name="readOnlyBookingDetails">
+
+
+<div class="form-group form-inline">
+    {{#with Residents}}
+
+        <fieldset class="col-md-6">
+            <legend>Resident Details</legend>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div>
+                        <img src="{{image_url}}" style="width:100px; height: 100px" id="residentPrimaryImage" name="residentPrimaryImage"><img>
+
+                    </div>
+
+
+                    <div><label class="label" for="prefix">Title</label>
+                        <p class="form-control-static" id="prefix" name="prefix">
+                            {{prefix}}
+                        </p></div>
+
+                    <div><label class="label" for="preferred_name">Preferred Name</label>
+                        <p class="form-control-static" id="preferred_name" name="preferred_name">
+                            {{preferred_name}}
+                        </p>
+
+                    </div>
+
+                    <div>
+                        <label class="label" for="first_name">First Name</label>
+                        <p class="form-control-static" id="first_name" name="first_name">{{first_name}} </p>
+                    </div>
+                    <div>
+                        <label class="label" for="second_name">Family Name</label>
+                        <p class="form-control-static" id="second_name" name="second_name">{{second_name}} </p>
+
+                    </div>
+
+
+                    <div>
+                        <label class="label" for="dob">Date of Birth</label>
+                        <p class="form-control-static" id="dob" name="dob">{{formatDate dob}} </p>
+                    </div>
+                    <div>
+                        <label class="label" for="second_name">Email Address</label>
+                        <p class="form-control-static" id="email_address" name="email_address">{{email}} </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </fieldset>
+
+        <fieldset class="col-md-6">
+            <legend>Room Details</legend>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div>
+                        <label class="label" for="building_name">Building Name</label>
+                        <p class="form-control-static" id="building_name" name="building_name">{{building_name}} </p>
+                    </div>
+                    <div>
+                        <label class="label" for="room_number">Room Number</label>
+                        <p class="form-control-static" id="room_number" name="room_number">{{room_number}} </p>
+                    </div>
+                    <div>
+                        <label class="label" for="date_of_occupancy">Date of Occupancy</label>
+                        <p class="form-control-static" id="date_of_occupancy" name="date_of_occupancy">{{formatDate date_of_occupancy}} </p>
+                    </div>
+                    <div>
+                        <label class="label" for="notes">Notes</label>
+                        <p class="form-control-static" id="notes" name="notes">{{notes}} </p>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </fieldset>
+
+    {{/with}}
+</div>
+
+</template>

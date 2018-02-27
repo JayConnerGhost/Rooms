@@ -1,0 +1,47 @@
+<template name="serviceChargeWarningTemplate">
+
+		<form>
+			<div class="fluid-container">
+				<fieldset id='fsParams'>
+					<legend>Additional information required</legend>
+					<div class="form-group">
+						<label for="deadlineDate" class="control-label requiredField">Payment Deadline Date
+							<span class="asteriskField">*</span>
+						</label>
+						<input id="deadlineDate" class="form-control"/>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label requiredField" for="cancellationDate">Proposed Cancellation Date
+							<span class="asteriskField">*</span></label>
+						<input class="form-control" id="cancellationDate" name="cancellationDate" type="text"/>
+					</div>
+
+					<div class="form-group">
+						<label for="amountOwing" class="control-label requiredField">
+							Arrears Owing
+							<span class="asteriskField">*</span>
+						</label>
+						<input class="form-control" id="amountOwing" name="amountOwing" type="text"/>
+
+						<div class="form-group">
+							<button id="composeDetails" name="composeDetails" class="btn btn-primary pushdown">Compose</button>
+						</div>
+					</div>
+
+				</fieldset>
+
+				<fieldset class="hidden" id="fsCompose">
+					<legend>Email</legend>
+					<div class="form-group">
+						<textarea col=100 rows=20 class="form-control" id="emailMessageWIP"></textarea>
+					</div>
+					<div class="form-group pushdown">
+					<button class="btn btn-primary" id="btnServiceChargeWarningSaveAndSend">Save and Send</button>
+					</div>
+				</fieldset>
+			</div>
+		</form>
+
+
+</template>

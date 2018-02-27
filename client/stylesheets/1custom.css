@@ -1,0 +1,92 @@
+.nav-custom
+{
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 40px;
+}
+
+.dropdown-toggle-custom
+{
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+ul.list-group:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+.list-group-item {
+    float: left;
+    padding-top:0px;
+    padding-bottom: 0px;
+}
+list-group-left
+{
+    padding-right:40px;
+    float:right;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.pushdown
+{
+    margin-top:20px;
+}
+.shown
+{
+    display:block;
+}
+
+ul.list-group:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+.list-group-item {
+    float: left;
+}
+.maintenanceFieldSets {
+    height: 438px;
+
+
+}
+
+.padLeft{
+    padding-right:20px;
+    margin-right:11px;
+}
+
+.padDown{
+    margin:2px;
+    height:1px;
+}
+
+
+#todolistwrapper{
+    overflow-y: scroll;
+    height:80vh;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.floatright {
+    clear:both;
+    float:right;
+}
+.scrollablediv
+{
+    height:300px;
+    overflow: auto;
+}

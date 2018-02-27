@@ -1,0 +1,19 @@
+<template name="adminRooms">
+
+    {{>locations}}
+
+</template>
+<template name="locations">
+    <div class="container-fluid">
+        <div class="form-group">
+            <select class="form-control" name="locationsSelect" id="locationsSelect">
+                {{#each location}}
+                <option value="{{key}}" {{locationSelected}}>{{name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div id="roomList">
+       {{> reactiveTable class="table table-bordered table-hover" collection=tables settings=settings}}
+      </div>
+    </div>
+</template>

@@ -1,0 +1,28 @@
+<template name="councilResidensActions" id="councilResidensActions">
+    <ul class="nav nav-tabs nav-justified">
+        
+                <li role="presentation" class="active" data-business-action="councilResidentsPercivalTerrace">
+                    <a href="#councilResidentsPercivalTerrace" aria-controls="councilResidentsPercivalTerrace" role="tab" data-toggle="tab">Percival Terrace</a>
+                </li>
+        
+                <li role="presentation" data-business-action="councilResidentsTheBayTree">
+                    <a href="#councilResidentsTheBayTree" aria-controls="councilResidentsTheBayTree" role="tab" data-toggle="tab">The Bay Tree</a>
+                </li>
+        
+            <li role="presentation" data-business-action="councilResidentsTheHeathers">
+                <a href="#councilResidentsTheHeathers" aria-controls="councilResidentsTheHeathers" role="tab" data-toggle="tab">The Heathers</a>
+            </li>
+    </ul> 
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="councilResidentsPercivalTerrace">
+            {{> Template.dynamic template="councilResidentsPercivalTerrace"}}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="councilResidentsTheBayTree">
+            {{> Template.dynamic template="councilResidentsTheBayTree"}}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="councilResidentsTheHeathers">
+            {{> Template.dynamic template="councilResidentsTheHeathers"}}
+        </div>
+    </div>
+</template>

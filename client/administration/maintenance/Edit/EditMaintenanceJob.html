@@ -1,0 +1,74 @@
+<template id="editMaintenanceJob" name="editMaintenanceJob">
+    <h4>Edit Job ticket</h4>
+    <div>job number is  {{jobID}}</div>
+
+    <div class="container-fluid">
+        <div class="form-group scrollablediv">
+
+            <!--location-->
+
+            <label for="locationSelect">Select Location</label>
+            <select class="form-control" id="locationSelect" name="locationSelect">
+                {{#each location}}
+                <option value="{{key}}" {{locationSelected}}>{{name}}</option>
+                {{/each}}
+            </select>
+
+            <!--rooms-->
+            <label for="roomSelect">Select Room</label>
+            <select class="form-control" id="roomSelect" name="roomSelect" >
+                {{#each room}}
+                <option value="{{_id}}" {{roomSelected}}>{{[ROOM No]}}</option>
+                {{/each}}
+            </select>
+
+            <!--reporting staff-->
+            <label for="reportingStaff">Select Reporting Staff</label>
+            <select class="form-control" id="reportingStaff" name="reportingStaff">
+                {{#each staff}}
+                <option value="{{_id}}" {{staffSelected}}>{{this.profile.firstName}} {{this.profile.lastName}}</option>
+
+                {{/each}}
+            </select>
+
+            <!--Priority-->
+            <label for="prioritySelect">Select Priority</label>
+            <select class="form-control" id="prioritySelect" name="prioritySelect">
+                {{#each priority}}
+                <option value="{{_id}}" {{prioritySelected}}> {{this.Label}}</option>
+                {{/each}}
+            </select>
+            <!--assigned staff-->
+            <label for="assignmentSelect">Assigned to</label>
+            <select class="form-control" id="assignmentSelect" name="assignmentSelect">
+
+                {{#each assignedStaff}}
+                <option value="{{_id}}" {{staffAssigned}}>{{this.profile.firstName}} {{this.profile.lastName}}</option>
+
+                {{/each}}
+            </select>
+
+            <!--risk-->
+            <label for="riskSelect">Select Risk Category</label>
+            <select class="form-control" id="riskSelect" name="riskSelect">
+                {{#each risk}}
+                <option value="{{_id}}" {{selectedRisk}}> {{this.Label}}</option>
+                {{/each}}
+            </select>
+
+            <!--description-->
+            <label for="description">Description</label>
+            <textarea id="description" name="description" cols="62" rows="10">{{currentDescription}}</textarea>
+
+            <!--comments-->
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments" cols="62" rows="10">{{currentComments}}</textarea>
+
+        </div>
+        <div id="controls" name="controls">
+            <button id="cancel" name="cancel">Cancel</button>
+            <button id="save" name="save">Save</button>
+        </div>
+
+    </div>
+</template>

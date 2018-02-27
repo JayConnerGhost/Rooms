@@ -1,0 +1,98 @@
+<template name="layout">
+   <meta name="viewport">
+  <div class="container">
+    <header>
+
+<title> Daffodil</title>
+
+      {{> nav }}
+    </header>
+    {{> yield}}
+  </div>
+</template>
+
+<template name='nav'>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid custom-container-fluid">
+
+      <div class="navbar-header">
+          {{> navBrand}}
+      </div>
+      {{#if currentUser}}
+        <ul class="nav navbar-nav nav-custom">
+        {{#if isInRole 'staff'}}
+          {{> navItems}}
+          {{/if}}
+        </ul>
+        <ul class="pull-right list-group">
+          <li class="list-group-item-danger list-inline">
+            <a href=# id='logout' name='logout'>logout</a></li>
+        </ul>
+       {{/if}}
+    </div><!-- /.container-fluid -->
+  </nav>
+</template>
+
+<template name="navBrand">
+  <a class="navbar-brand" href="{{ pathFor 'home' }}">Lincar Housing Portal</a>
+</template>
+
+<template name='navItems'>
+{{#if isInRole 'admin,systemAdmin'}}
+<div class="btn-group closed dropdown-toggle-custom">
+ <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Administration <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="{{pathFor 'admin.residents'}}">Residents</a></li>
+      <li><a href="{{pathFor 'admin.locations'}}">Locations</a></li>
+      <li><a href="{{pathFor 'admin.rooms'}}">Rooms</a></li>
+      <li><a href="{{pathFor 'admin.maintenance'}}">Maintenance</a></li>
+      <li class="divider"></li>
+      <li><a href="{{pathFor 'admin.staff'}}">Staff</a></li>
+    </ul>
+</div>
+{{/if}}
+<!--
+<div class="btn-group closed dropdown-toggle-custom">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Residents<span class="caret"></span></a>
+       <ul class="dropdown-menu ">
+          <li><a href="{{pathFor 'resident.maintenance.js.requests'}}">Maintenance Requests</a></li>
+          <li><a href="{{pathFor 'resident.payment.records'}}">Payment Records</a></li>
+          <li><a href="{{pathFor 'residents.correspondence.records'}}">Correspondence</a></li>
+       </ul>
+</div>-->
+
+<div class="btn-group closed dropdown-toggle-custom">
+    <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-expanded="false">Council<span class="caret"></span></a>
+       <ul class="dropdown-menu">
+         <li><a href="{{pathFor 'council.residents.records'}}">Residents Reports</a></li>
+         <li><a href="{{pathFor 'home'}}">Location Reports</a></li>
+         <li><a href="{{pathFor 'home'}}">Rooms Reports</a></li>
+     </ul>
+</div>
+
+
+    <!--
+<div class="btn-group closed dropdown-toggle-custom">
+    <a href="#" class="dropdown-toggle dropdown-toggle-custom" data-toggle="dropdown" role="button" aria-expanded="false">London<span class="caret"></span></a>
+       <ul class="dropdown-menu">
+         <li><a href="{{pathFor 'home'}}">Residents</a></li>
+         <li><a href="{{pathFor 'home'}}">Locations</a></li>
+         <li><a href="{{pathFor 'home'}}">Rooms</a></li>
+         <li><a href="{{pathFor 'home'}}">Maintenance</a></li>
+         <li class="divider"></li>
+         <li><a href="{{pathFor 'staffList'}}">Staff</a></li>
+       </ul>
+</div>-->
+
+{{#if isInRole 'systemAdmin,staff'}}
+<div class="btn-group closed dropdown-toggle-custom">
+    <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-expanded="false">System<span class="caret"></span></a>
+       <ul class="dropdown-menu">
+         <li><a href="{{pathFor 'createUser'}}">Create User</a></li>
+         <li><a href="{{pathFor 'managePermissions'}}">Manage User Permissions</a></li>
+         <li><a href="{{pathFor 'globaljobsList'}}">Global Job List</a></li>
+
+       </ul>
+</div>
+{{/if}}
+</template>

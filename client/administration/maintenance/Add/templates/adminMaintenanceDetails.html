@@ -1,0 +1,36 @@
+
+<template id="adminMaintenanceDetails" name="adminMaintenanceDetails">
+
+
+    <div class="col-lg-6 ">
+    <fieldset id="detailsTabs" class="maintenanceFieldSets">
+        <legend>Information</legend>
+        <div class="form-group ">
+            <div class="" >
+                <ul class="list-group list-group-left list-inline">
+                    <li class="list-group-item btn-default ">
+                        <a  href="#description" id="descriptionTab" aria-controls="decription" role="tab" data-toggle="tab">Description</a>
+                    </li>
+                    <li class="list-group-item btn-default">
+                        <a  href="#comments" id="commentsTab" aria-controls="comments" role="tab" data-toggle="tab">Comments</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="description">
+                {{> Template.dynamic template="maintenanceDescription"}}
+            </div>
+            <div role="tabpanel" class="tab-pane" id="comments">
+                {{> Template.dynamic template="maintenanceComments"}}
+            </div>
+
+
+        </div>
+    </fieldset>
+    </div>
+
+
+</template>

@@ -1,0 +1,25 @@
+<template id="completeMaintenanceJob" name="completeMaintenanceJob">
+
+    <div class="container-fluid">
+        <div>
+            <h3>job ticket</h3>
+            <h4> job number is {{jobID}} </h4>
+        </div>
+        {{#with Job}}
+        <div class="form-group">
+
+            <span>
+            <label for="comments">Comments</label>
+                <textarea value="{{comments}}" id="comments" name="comments"  cols="65" rows="25"></textarea>
+
+            </span>
+
+        </div>
+        {{/with}}
+            <div class="floatright clearfix">
+                <button id="complete" name="complete">Complete Job</button>
+                <button id="cancel" name="cancel">Cancel Completion</button>
+            </div>
+
+    </div>
+</template>

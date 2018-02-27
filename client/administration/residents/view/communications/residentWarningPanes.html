@@ -1,0 +1,19 @@
+<template name="residentWarningPanes">
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="generalWarning">
+            {{> Template.dynamic template="generalWarningTemplate"}}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="serviceChargeWarning">
+            {{> Template.dynamic template="serviceChargeWarningTemplate"}}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="behaviourWarning">
+            {{> Template.dynamic template="behaviourWarningTemplate"}}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="drugsWarning">
+            {{> Template.dynamic template="drugsWarningTemplate"}}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="theftWarning">
+            {{> Template.dynamic template="theftWarningTemplate"}}
+        </div>
+    </div>
+</template>

@@ -1,0 +1,11 @@
+<template id="todoList" name="todoList">
+<h3>Job List</h3>
+<div id="todolistwrapper">
+<ul>
+{{#each tasks}}
+    {{>todo}}
+    <div class="padDown"></div>
+{{/each}}
+</ul>
+</div>
+</template>

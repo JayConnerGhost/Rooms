@@ -1,0 +1,20 @@
+<template id="viewMaintenanceJob" name="viewMaintenanceJob">
+   <div class="container-fluid">
+    <div>
+       <h3>job ticket</h3>
+       <h4> job number is {{jobID}} </h4>
+   </div>
+
+    {{#with Job}}
+
+    <div><label for="location">Location</label><P class="form-control-static" id="Location" name="Location">{{location}}</P></div>
+    <div><label for="Room">Room</label><P class="form-control-static" id="Room" name="Room">{{room}}</P></div>
+    <div><label for="description">Description</label><P class="form-control-static" id="description" name="description">{{description}}</P></div>
+    <div><label for="comments">Comments</label><P class="form-control-static" id="comments" name="comments">{{comments}}</P></div>
+    <div><label for="reportedBy">Reported By</label><P class="form-control-static" id="reportedBy" name="reportedBy">{{reporting_staff}}</P></div>
+    <div><label for="assignedTo">Assigned To</label><P class="form-control-static" id="assignedTo" name="assingedTo">{{assignedTo}}</P></div>
+    <div><label for="risk">Risk</label><P class="form-control-static" id="risk" name="risk">{{risk}}</P></div>
+    <div><label for="priority">Priority</label><P class="form-control-static" id="priority" name="risk">{{priority}}</P></div>
+    {{/with}}
+   </div>
+</template>

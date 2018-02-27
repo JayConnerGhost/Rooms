@@ -1,0 +1,21 @@
+
+<template id="todo" name="todo">
+
+<fieldset>
+<legend>{{location}} </legend>
+<div><b>status: </b>{{status}}</div>
+<div>
+    <b>priority: </b>{{priority}} <span style="background-color:{{risk}}"><b>Risk</b> {{risk}}</span> <b>Location</b> {{location}} <b>Room</b> {{room}}
+</div>
+
+<div><b>Job Description</b></div>
+<div>
+{{description}}
+</div>
+<div>
+<button class="btn btn-default" id="viewjob" name="viewjob">View Job</button>
+<button class="btn btn-default" id="reassign" name="reassign">Reassign</button>
+<button class="btn btn-default" id="completed" name="completed">Completed</button> </div>
+</fieldset>
+
+</template>

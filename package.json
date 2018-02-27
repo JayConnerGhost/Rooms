@@ -1,0 +1,15 @@
+{
+  "name": "hello",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "datatables.net": "^1.10.16",
+    "datatables.net-bs": "^1.10.16",
+    "meteor-node-stubs": "^0.3.2",
+    "simpl-schema": "^1.1.2",
+    "simple-schema": "^1.1.0"
+  }
+}

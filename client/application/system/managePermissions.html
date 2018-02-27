@@ -1,0 +1,38 @@
+<template id="managePermissions" name="ManagePermissions">
+
+<div class="container-fluid">
+    <div class="row col-lg-6 col-sm-12">
+{{>selectUserTemplate}}
+    </div>
+    <div class="row col-lg-12 col-sm-12">
+{{>permissionsTemplate}}
+    </div>
+</div>
+</template>
+
+<template id="selectUserTemplate" name="selectUserTemplate">
+    <div class="form-group">
+        <select class="form-control" name="userSelect" id="userSelect">
+            {{#each user}}
+                <option value="{{_id}}">{{emails.[0].address}}</option>
+            {{/each}}
+        </select>
+    </div>
+</template>
+
+<template id="permissionsTemplate" name="permissionsTemplate">
+User Roles
+<div class="container-fluid">
+    <div class="row col-lg-12">
+   {{#each roles}}
+       <button id="btnRemove{{.}}" class="btn-default btn-danger">Remove {{.}}</button>
+   {{/each}}
+
+    <button class="btn-default" id="btnStaff">Add Staff</button>
+    <button class="btn-default" id="btnAdmin">Add Admin</button>
+    <button class="btn-default" id="btnSystemAdmin">Add System Admin</button>
+
+    </div>
+</div>
+</template>
+

@@ -1,0 +1,110 @@
+<template name="residentsBookingDetails">
+   <form method="post" class="registration">
+            <div name="booking_details" id="bookingDetails" class="tab-pane fade in active">
+              <!--photo-->
+              <div class="form-group">
+                <div class="container">
+                  <img src="#" name="imageCurrent" style=" max-height: 200px; max-width: 200px" />
+                </div>
+                <input type="hidden" role="uploadcare-uploader" name="resident" data-public-key="demopublickey" data-tabs="file camera url facebook gdrive gphotos dropbox instagram evernote flickr skydrive"
+                  data-image-shrink="640x480" data-images-only="true" data-preview-step="true" data-clearable="true" data-multiple="true"
+                  data-system-dialog="false" data-multiple-min="1" data-multiple-max="5" data-crop="" />
+
+              </div>
+              <fieldset>
+                <legend>Resident Details:</legend>
+                <!--title-->
+                <div class="form-group">
+                  <label class="control-label requiredField" for="prefix">Title 
+              <span class="asteriskField">*</span></label>
+                  <select class="select form-control" id="prefix" name="prefix">
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Miss">Miss</option>
+                <option value="Ms">Ms</option>
+                <option value="Mz">Mz</option>
+                <option value="Mx">Mx</option>
+                <option value="Dr">Dr</option>
+                <option value="Sir">Sir</option>
+                <option value="other">other</option>
+                <option value="Prof">Prof</option>
+              </select>
+                </div>
+                <!--preferred name-->
+                <div class="form-group">
+                  <label class="control-label requiredField" for="preferred_name">Preferred Name 
+              <span class="asteriskField">*</span></label>
+                  <input class="form-control" id="preferred_name" name="preferred_name" placeholder="Resident Prefered Name" type="text" />
+                </div>
+                <!--first name -->
+                <div class="form-group">
+                  <label class="control-label requiredField" for="first_name">First Name 
+              <span class="asteriskField">*</span></label>
+                  <input class="form-control" id="first_name" name="first_name" placeholder="Resident First Name" type="text" />
+                </div>
+                <!--second name -->
+                <div class="form-group">
+                  <label class="control-label requiredField" for="second_name">Second Name 
+              <span class="asteriskField">*</span></label>
+                  <input class="form-control" id="second_name" name="second_name" placeholder="Resident Second Name" type="text" />
+                </div>
+                <!--DOB-->
+                <div class="form-group">
+                  <label class="control-label requiredField" for="dob">Date Of Birth</label>
+
+                    <input class="form-control" id="dob" name="dob" type="text" />
+                  </div>
+                
+                <!--date_of_occupancy-->
+                <div class="form-group">
+                  <label class="control-label requiredField" for="date_of_occupancy">Date of occupancy 
+                    <span class="asteriskField">*</span></label>
+                     <input class="set-due-date form-control" id="date_of_occupancy" name="date_of_occupancy" type="text" />
+                </div>
+                <!--Email-->
+                <div class="form-group">
+                  <label class="control-label requiredField" for="email">Email Address 
+              <span class="asteriskField">*</span></label>
+                  <input class="form-control" id="email" name="email" placeholder="Resident email address" type="email" />
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Room Details</legend>
+                <!--building_name-->
+                <div class="form-group">
+                  <label class="control-label requiredField" for="building_name">Building Name 
+              <span class="asteriskField">*</span></label>
+                  <select class="select form-control" id="building_name" name="building_name">
+                <option value="Percival Terrace">3-5 Percival Terrace</option>
+                <option value="The Heathers">The Heathers</option>
+                <option value="The Baytree">The Baytree</option>
+              </select>
+                </div>
+                <!--room_number-->
+                <div class="form-group">
+                  <label class="control-label requiredField" for="room_number">Room Number 
+              <span class="asteriskField">*</span></label>
+                  <input class="form-control" id="room_number" name="room_number" placeholder="Room number" type="text" />
+                </div>
+
+              </fieldset>
+              <fieldset>
+                <legend>Notes</legend>
+                <div class="form-group">
+                  <textarea class="form-control" name="notes" id="notes" placeholder="notes" rows="10"></textarea>
+                </div>
+              </fieldset>
+              <!--image data -->
+              <div class="form-group">
+                <input type="hidden" name="image-group-url" />
+                <input type="hidden" name="image-group-uuid" />
+              </div>
+              <div class="form-group">
+                <div>
+                  <button class="btn btn-default" name="Save" type="submit">Register</button>
+                </div>
+              </div>
+            </div>
+           
+          </form>
+   </template>

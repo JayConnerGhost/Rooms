@@ -1,0 +1,29 @@
+<template name="adminViewResidentBusinessActions">
+    <ul class="nav nav-tabs nav-justified">
+
+
+        <li role="presentation" class="active" data-business-action="readOnlyBookingDetails">
+            <a href="#readOnlyBookingDetails" aria-controls="readOnlyBookingDetails" role="tab" data-toggle="tab">Booking Details</a>
+        </li>
+
+        <li role="presentation" data-business-action="readOnlyBookingImages<">
+            <a href="#readOnlyBookingImages" aria-controls="readOnlyBookingImages<" role="tab" data-toggle="tab">Images</a>
+        </li>
+
+    <li role="presentation" data-business-action="readOnlyBookingCommunications">
+        <a href="#readOnlyBookingCommunications" aria-controls="readOnlyBookingCommunications" role="tab" data-toggle="tab">Communications</a>
+    </li>
+    </ul>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="readOnlyBookingDetails">
+            {{> Template.dynamic template="readOnlyBookingDetails"}}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="readOnlyBookingImages">
+            {{> Template.dynamic template="readOnlyBookingImages"}}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="readOnlyBookingCommunications">
+            {{> Template.dynamic template="readOnlyBookingCommunications"}}
+        </div>
+    </div>
+</template>

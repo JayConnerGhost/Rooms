@@ -1,0 +1,29 @@
+<template id="residentBookingBusinessActions" name="residentBookingBusinessActions">
+        <ul class="nav nav-tabs nav-justified">
+
+                <li role="presentations"  class="active" data-business-action="bookingDetails">
+                    <a href="#bookingDetails" aria-controls="bookingDetails" role="tab" data-toggle="tab">Booking Details</a>
+                </li>
+
+                <li role="presentations" data-business-action="bookingImages">
+                        <a href="#bookingImages" aria-controls="bookingImages" role="tab" data-toggle="tab">Images</a>
+                </li>
+
+               <!-- <li role="presentations" data-business-action="residentCommunications">
+                        <a href="#residentCommunications" aria-controls="residentCommunications" role="tab" data-toggle="tab">Communications</a>
+                </li> -->
+
+        </ul>
+
+        <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="bookingDetails">
+                    {{> Template.dynamic template="residentsBookingDetails"}}
+               </div>   
+               <div role="tabpanel" class="tab-pane" id="bookingImages">
+                    {{> Template.dynamic template="residentBookingImages"}}
+                </div> 
+               <!-- <div role="tabpanel" class="tab-pane" id="residentCommunications">
+                    {{> Template.dynamic template="residentBookingCommunications"}}
+                </div> -->
+        </div>
+</template>

@@ -1,0 +1,8 @@
+{
+  "galaxy.meteor.com": {
+    "env": {
+      "ROOT_URL": "http://codegenie.eu.meteorapp.com",
+      "MONGO_URL": "mongodb://lincardb:mango0$@ds145780.mlab.com:45780/lincar0dev"
+    }
+  }
+}
